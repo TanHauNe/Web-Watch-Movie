@@ -1,4 +1,4 @@
-import axiosCilent from './axiosCilent';
+import axiosClient from './axiosClient';
 
 export const category = {
    movie: 'movie',
@@ -20,31 +20,31 @@ export const tvType = {
 const tmdbApi = {
    getMoviesList: (type, params) => {
       const url = 'movie/' + movieType[type];
-      return axiosCilent.get(url, params);
+      return axiosClient.get(url, params);
    },
    getTvList: (type, params) => {
       const url = 'tv/' + tvType[type];
-      return axiosCilent.get(url, params);
+      return axiosClient.get(url, params);
    },
    getVideos: (cate, id) => {
       const url = category[cate] + '/' + id + '/videos';
-      return axiosCilent.get(url, { params: {} });
+      return axiosClient.get(url, { params: {} });
    },
    search: (cate, params) => {
       const url = 'search/' + category[cate];
-      return axiosCilent.get(url, params);
+      return axiosClient.get(url, params);
    },
    detail: (cate, id, params) => {
       const url = category[cate] + '/' + id;
-      return axiosCilent.get(url, params);
+      return axiosClient.get(url, params);
    },
    credits: (cate, id) => {
       const url = category[cate] + '/' + id + '/credits';
-      return axiosCilent.get(url, { params: {} });
+      return axiosClient.get(url, { params: {} });
    },
-   similar: (cate, params) => {
+   similar: (cate, id) => {
       const url = category[cate] + '/' + id + '/similar';
-      return axiosCilent.get(url, { params: {} });
+      return axiosClient.get(url, { params: {} });
    },
 };
 

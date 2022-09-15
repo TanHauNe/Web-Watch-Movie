@@ -7,7 +7,7 @@ const axiosCilent = axios.create({
    headers: {
       'Content-type': 'application/json',
    },
-   paramsSerializer: (param) => queryString.stringify({ ...params, api_key: apiConfig.apiKey }),
+   paramsSerializer: (params) => queryString.stringify({ ...params, api_key: apiConfig.apiKey }),
 });
 
 axiosCilent.interceptors.request.use(async (config) => config);
