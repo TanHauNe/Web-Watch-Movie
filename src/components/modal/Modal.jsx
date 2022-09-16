@@ -1,7 +1,7 @@
 import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import './modal.scss';
-import { useRef } from 'react';
 
 const Modal = (props) => {
    const [active, setActive] = useState(false);
@@ -31,7 +31,7 @@ export const ModalContent = (props) => {
    };
 
    return (
-      <div className="modal_content">
+      <div className="modal__content">
          {props.children}
          <div className="modal__content__close" onClick={closeModal}>
             <i className="bx bx-x"></i>
