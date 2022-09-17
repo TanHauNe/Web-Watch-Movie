@@ -27,9 +27,9 @@
       transition: transform 0.6s ease, opacity 0.6s ease;
       position: relative;
 
-      // @include tablet {
-      //    width: 80%;
-      // }
+      @include tablet {
+         width: 80%;
+      }
 
       &__close {
          position: absolute;

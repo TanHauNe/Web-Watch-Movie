@@ -2,11 +2,11 @@
 
 .movie-list{
     .swiper-slide{
-        width: 15px;
+        width: 15%;
 
-        // @include tablet{
-        //     width: 30%;
-        // }
+        @include tablet{
+            width: 30%;
+        }
 
         @include mobile{
             width: 40%;

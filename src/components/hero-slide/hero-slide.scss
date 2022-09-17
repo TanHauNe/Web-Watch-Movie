@@ -41,9 +41,9 @@
             padding: 0 3rem;
             position: relative;
 
-            // @include tablet {
-            //     width: 100%;
-            // }
+            @include tablet {
+                width: 100%;
+            }
 
             & > * ~ * {
                 margin-top: 3rem;
@@ -54,9 +54,9 @@
                 font-weight: 700;
                 line-height: 1;
 
-                // @include tablet {
-                //     font-size: 4rem;
-                // }
+                @include tablet {
+                    font-size: 4rem;
+                }
             }
 
             .overview {
